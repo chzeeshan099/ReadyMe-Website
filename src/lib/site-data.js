@@ -18,8 +18,9 @@ import {
 } from "lucide-react";
 
 export const navLinks = [
-  { href: "/", label: "Dashboard" },
-  { href: "/dashboard", label: "Past Papers" },
+  { href: "/dashboard", label: "Dashboard" },
+  { href: "/yearly-past-paper", label: "Yearly Past Papers" },
+  { href: "/topics-past-paper", label: "Topical Past Papers" },
   { href: "/courses", label: "Courses" },
   { href: "/pricing", label: "Pricing" },
   { href: "/ai-chat", label: "AI Chat" },
