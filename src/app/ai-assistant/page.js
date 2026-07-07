@@ -1,6 +1,6 @@
-import AppFrame from "../../components/app-frame";
-import ChatPreview from "../../components/chat-preview";
-import PageHero from "../../components/page-hero";
+import AppFrame from "@/components/app-frame";
+import ChatPreview from "@/components/chat-preview";
+import PageHero from "@/components/page-hero";
 
 export default function AiAssistantPage() {
   return (
@@ -14,3 +14,4 @@ export default function AiAssistantPage() {
     </AppFrame>
   );
 }
+

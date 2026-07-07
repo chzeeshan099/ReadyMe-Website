@@ -1,7 +1,7 @@
 import Link from "next/link";
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
-import { TOPIC_SUBJECTS } from "../../lib/past-paper-data";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
+import { TOPIC_SUBJECTS } from "@/lib/past-paper-data";
 
 export default function TopicsPastPaperPage() {
   return (
@@ -30,3 +30,4 @@ export default function TopicsPastPaperPage() {
     </AppFrame>
   );
 }
+

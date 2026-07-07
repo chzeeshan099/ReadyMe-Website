@@ -1,5 +1,5 @@
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
 
 export default function ReferralCodePage() {
   return (
@@ -18,3 +18,4 @@ export default function ReferralCodePage() {
     </AppFrame>
   );
 }
+

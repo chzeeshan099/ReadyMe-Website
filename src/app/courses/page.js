@@ -1,7 +1,7 @@
-import AppFrame from "../../components/app-frame";
-import CourseCard from "../../components/course-card";
-import PageHero from "../../components/page-hero";
-import { courses } from "../../lib/site-data";
+import AppFrame from "@/components/app-frame";
+import CourseCard from "@/components/course-card";
+import PageHero from "@/components/page-hero";
+import { courses } from "@/lib/site-data";
 
 export default function CoursesPage() {
   return (
@@ -20,3 +20,4 @@ export default function CoursesPage() {
     </AppFrame>
   );
 }
+

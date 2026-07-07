@@ -164,3 +164,4 @@ export const toolPages = [
 export function getCourseBySlug(slug) {
   return courses.find((course) => course.slug === slug);
 }
+

@@ -1,5 +1,5 @@
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
 
 export default function RegisterPage() {
   return (
@@ -21,3 +21,4 @@ export default function RegisterPage() {
     </AppFrame>
   );
 }
+

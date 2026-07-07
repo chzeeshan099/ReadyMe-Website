@@ -70,3 +70,4 @@ export default function YearlySubjectBrowser({ groups, subjects }) {
     </div>
   );
 }
+

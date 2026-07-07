@@ -1,7 +1,7 @@
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
-import SectionCard from "../../components/section-card";
-import { toolPages } from "../../lib/site-data";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
+import SectionCard from "@/components/section-card";
+import { toolPages } from "@/lib/site-data";
 
 export default function DashboardPage() {
   const pastPaperPages = toolPages.filter((item) =>
@@ -46,3 +46,4 @@ export default function DashboardPage() {
     </AppFrame>
   );
 }
+

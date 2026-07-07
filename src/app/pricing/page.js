@@ -1,6 +1,6 @@
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
-import { pricingPlans } from "../../lib/site-data";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
+import { pricingPlans } from "@/lib/site-data";
 
 export default function PricingPage() {
   return (
@@ -34,3 +34,4 @@ export default function PricingPage() {
     </AppFrame>
   );
 }
+

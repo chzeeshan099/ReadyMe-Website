@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import AppFrame from "../../../components/app-frame";
-import { courses, getCourseBySlug } from "../../../lib/site-data";
+import AppFrame from "@/components/app-frame";
+import { courses, getCourseBySlug } from "@/lib/site-data";
 
 export function generateStaticParams() {
   return courses.map((course) => ({ slug: course.slug }));

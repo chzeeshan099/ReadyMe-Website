@@ -67,3 +67,4 @@ export default function WrittenPractice({ title, subtitle, questions, label }) {
     </div>
   );
 }
+

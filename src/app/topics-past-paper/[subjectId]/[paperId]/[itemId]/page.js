@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import AppFrame from "../../../../../components/app-frame";
-import McqPractice from "../../../../../components/mcq-practice";
-import WrittenPractice from "../../../../../components/written-practice";
-import { TOPIC_SUBJECTS, getTopicItemById } from "../../../../../lib/past-paper-data";
+import AppFrame from "@/components/app-frame";
+import McqPractice from "@/components/mcq-practice";
+import WrittenPractice from "@/components/written-practice";
+import { TOPIC_SUBJECTS, getTopicItemById } from "@/lib/past-paper-data";
 
 export function generateStaticParams() {
   const params = [];

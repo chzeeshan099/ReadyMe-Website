@@ -21,3 +21,4 @@ export default function SectionCard({ title, description, href, action = "Open",
     </div>
   );
 }
+

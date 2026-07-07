@@ -1,7 +1,7 @@
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
-import YearlySubjectBrowser from "../../components/yearly-subject-browser";
-import { SUBJECT_GROUPS, YEARLY_SUBJECTS } from "../../lib/past-paper-data";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
+import YearlySubjectBrowser from "@/components/yearly-subject-browser";
+import { SUBJECT_GROUPS, YEARLY_SUBJECTS } from "@/lib/past-paper-data";
 
 export default function YearlyPastPaperPage() {
   return (
@@ -16,3 +16,4 @@ export default function YearlyPastPaperPage() {
     </AppFrame>
   );
 }
+

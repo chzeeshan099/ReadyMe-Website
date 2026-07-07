@@ -1,5 +1,5 @@
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
 
 export default function TestMockBuilderPage() {
   return (
@@ -22,3 +22,4 @@ export default function TestMockBuilderPage() {
     </AppFrame>
   );
 }
+

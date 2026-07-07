@@ -137,3 +137,4 @@ export default function McqPractice({ title, subtitle, questions }) {
     </div>
   );
 }
+

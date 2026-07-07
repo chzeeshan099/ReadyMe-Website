@@ -455,3 +455,4 @@ export function getYearlyVariantById(subjectId, sessionId, variantId) {
 
   return null;
 }
+

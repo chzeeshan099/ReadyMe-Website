@@ -1,7 +1,7 @@
-import AppFrame from "../components/app-frame";
-import PageHero from "../components/page-hero";
-import SectionCard from "../components/section-card";
-import { dashboardCards, toolPages } from "../lib/site-data";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
+import SectionCard from "@/components/section-card";
+import { dashboardCards, toolPages } from "@/lib/site-data";
 
 export default function HomePage() {
   return (
@@ -42,3 +42,4 @@ export default function HomePage() {
     </AppFrame>
   );
 }
+

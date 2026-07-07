@@ -1,5 +1,5 @@
-import SiteFooter from "./site-footer";
-import SiteHeader from "./site-header";
+import SiteFooter from "@/components/site-footer";
+import SiteHeader from "@/components/site-header";
 
 export default function AppFrame({ children }) {
   return (
@@ -12,3 +12,4 @@ export default function AppFrame({ children }) {
     </>
   );
 }
+

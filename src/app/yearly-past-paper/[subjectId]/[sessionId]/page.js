@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import AppFrame from "../../../../components/app-frame";
-import PageHero from "../../../../components/page-hero";
-import { getYearlySessionById, getYearlySubjectById, YEARLY_SUBJECTS } from "../../../../lib/past-paper-data";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
+import { getYearlySessionById, getYearlySubjectById, YEARLY_SUBJECTS } from "@/lib/past-paper-data";
 
 export function generateStaticParams() {
   const params = [];

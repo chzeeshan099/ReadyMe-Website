@@ -9,3 +9,4 @@ export default function PageHero({ badge, title, description }) {
     </section>
   );
 }
+

@@ -1,5 +1,5 @@
-import AppFrame from "../../components/app-frame";
-import PageHero from "../../components/page-hero";
+import AppFrame from "@/components/app-frame";
+import PageHero from "@/components/page-hero";
 
 export default function AdminPanelPage() {
   return (
@@ -20,3 +20,4 @@ export default function AdminPanelPage() {
     </AppFrame>
   );
 }
+
