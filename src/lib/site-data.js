@@ -18,8 +18,8 @@ import {
 } from "lucide-react";
 
 export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/dashboard", label: "Dashboard" },
+  { href: "/", label: "Dashboard" },
+  { href: "/dashboard", label: "Past Papers" },
   { href: "/courses", label: "Courses" },
   { href: "/pricing", label: "Pricing" },
   { href: "/ai-chat", label: "AI Chat" },
