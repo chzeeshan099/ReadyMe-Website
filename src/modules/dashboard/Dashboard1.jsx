@@ -7,7 +7,7 @@ import React from 'react'
 const Dashboard1 = () => {
   return (
    <>
-    <AppFrame>
+    {/* <AppFrame> */}
       <PageHero
         badge="Dashboard"
         title="A browser-friendly Ready Me command center."
@@ -41,7 +41,7 @@ const Dashboard1 = () => {
           ))}
         </div>
       </section>
-    </AppFrame>
+    {/* </AppFrame> */}
    </>
   )
 }
