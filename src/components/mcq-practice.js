@@ -27,11 +27,11 @@ export default function McqPractice({ title, subtitle, questions }) {
   return (
     <div className="space-y-6">
       <section className="glass rounded-[32px] p-6 md:p-8">
-        <p className="text-sm uppercase tracking-[0.35em] text-sky-300">{title}</p>
-        <h1 className="mt-3 text-3xl font-semibold text-white md:text-5xl">{subtitle}</h1>
+        <p className="theme-accent text-sm uppercase tracking-[0.35em]">{title}</p>
+        <h1 className="theme-text mt-3 text-3xl font-semibold md:text-5xl">{subtitle}</h1>
         <div className="mt-6 grid gap-4 md:grid-cols-4">
-          <div className="rounded-2xl bg-white/5 px-4 py-4 text-slate-200">Score: {correctCount}</div>
-          <div className="rounded-2xl bg-white/5 px-4 py-4 text-slate-200">
+          <div className="theme-surface theme-text-soft rounded-2xl px-4 py-4">Score: {correctCount}</div>
+          <div className="theme-surface theme-text-soft rounded-2xl px-4 py-4">
             Progress: {currentIndex + 1}/{questions.length}
           </div>
           <button
@@ -39,7 +39,7 @@ export default function McqPractice({ title, subtitle, questions }) {
             onClick={() =>
               setRevealedAnswers((current) => ({ ...current, [currentQuestion.id]: !current[currentQuestion.id] }))
             }
-            className="rounded-2xl bg-white/5 px-4 py-4 text-left text-slate-200"
+            className="theme-surface theme-text-soft rounded-2xl px-4 py-4 text-left"
           >
             {revealed ? "Hide Answer" : "Reveal Answer"}
           </button>
@@ -50,7 +50,7 @@ export default function McqPractice({ title, subtitle, questions }) {
               setSelectedAnswers({});
               setRevealedAnswers({});
             }}
-            className="rounded-2xl bg-sky-500 px-4 py-4 text-left font-semibold text-white"
+            className="theme-button-primary rounded-2xl px-4 py-4 text-left font-semibold"
           >
             Restart
           </button>
@@ -58,9 +58,9 @@ export default function McqPractice({ title, subtitle, questions }) {
       </section>
 
       <section className="glass rounded-[32px] p-6 md:p-8">
-        <div className="rounded-[28px] border border-white/10 bg-[#030916] p-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-sky-300">Question {currentIndex + 1}</p>
-          <p className="mt-4 text-lg leading-8 text-white">{currentQuestion.prompt}</p>
+        <div className="theme-surface-strong rounded-[28px] p-6">
+          <p className="theme-accent text-sm uppercase tracking-[0.3em]">Question {currentIndex + 1}</p>
+          <p className="theme-text mt-4 text-lg leading-8">{currentQuestion.prompt}</p>
 
           <div className="mt-6 grid gap-3">
             {currentQuestion.options.map((option) => {
@@ -80,13 +80,13 @@ export default function McqPractice({ title, subtitle, questions }) {
                   }
                   className={`rounded-[22px] border px-4 py-4 text-left transition ${
                     shouldHighlight
-                      ? "border-emerald-400 bg-emerald-500/15 text-white"
+                      ? "border-emerald-400 bg-emerald-500/15 theme-text"
                       : isSelected
-                        ? "border-sky-400 bg-sky-500/15 text-white"
-                        : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10"
+                        ? "border-sky-400 bg-sky-500/15 theme-text"
+                        : "theme-surface theme-text-soft hover:brightness-105"
                   }`}
                 >
-                  <span className="block text-sm font-semibold text-sky-300">{option.key}</span>
+                  <span className="theme-accent block text-sm font-semibold">{option.key}</span>
                   <span className="mt-2 block text-sm leading-7">{option.text}</span>
                 </button>
               );
@@ -94,7 +94,7 @@ export default function McqPractice({ title, subtitle, questions }) {
           </div>
 
           {revealed ? (
-            <div className="mt-6 rounded-[24px] bg-emerald-500/10 px-4 py-4 text-sm leading-7 text-emerald-100">
+            <div className="theme-success mt-6 rounded-[24px] px-4 py-4 text-sm leading-7">
               {currentQuestion.answerNote}
             </div>
           ) : null}
@@ -113,10 +113,10 @@ export default function McqPractice({ title, subtitle, questions }) {
                   onClick={() => setCurrentIndex(index)}
                   className={`h-11 w-11 rounded-full text-sm font-semibold ${
                     currentIndex === index
-                      ? "bg-sky-500 text-white"
+                      ? "theme-button-primary"
                       : answered
-                        ? "bg-white text-slate-950"
-                        : "bg-white/10 text-slate-200"
+                        ? "theme-surface-strong theme-text"
+                        : "theme-surface theme-text-soft"
                   }`}
                 >
                   {index + 1}
@@ -128,7 +128,7 @@ export default function McqPractice({ title, subtitle, questions }) {
           <button
             type="button"
             onClick={() => setCurrentIndex((current) => Math.min(current + 1, questions.length - 1))}
-            className="rounded-full bg-sky-500 px-5 py-3 font-semibold text-white"
+            className="theme-button-primary rounded-full px-5 py-3 font-semibold"
           >
             Next question
           </button>

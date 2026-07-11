@@ -23,7 +23,7 @@ export default function YearlySubjectBrowser({ groups, subjects }) {
   return (
     <div className="space-y-6">
       <section className="glass rounded-[32px] p-6 md:p-8">
-        <p className="text-sm uppercase tracking-[0.35em] text-sky-300">Filter By Book</p>
+        <p className="theme-accent text-sm uppercase tracking-[0.35em]">Filter By Book</p>
         <div className="mt-5 flex flex-wrap gap-3">
           {groups.map((group) => (
             <button
@@ -32,8 +32,8 @@ export default function YearlySubjectBrowser({ groups, subjects }) {
               onClick={() => setSelectedGroup(group.id)}
               className={`rounded-full px-4 py-2 text-sm transition ${
                 selectedGroup === group.id
-                  ? "bg-sky-500 text-white"
-                  : "border border-white/10 bg-white/5 text-slate-200 hover:bg-white/10"
+                  ? "theme-button-primary"
+                  : "theme-button-secondary"
               }`}
             >
               {group.label}
@@ -45,7 +45,7 @@ export default function YearlySubjectBrowser({ groups, subjects }) {
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search by subject name or code..."
-          className="mt-5 w-full rounded-[22px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none"
+          className="theme-input mt-5 w-full rounded-[22px] px-4 py-3 outline-none"
         />
       </section>
 
@@ -53,16 +53,16 @@ export default function YearlySubjectBrowser({ groups, subjects }) {
         {visibleSubjects.length ? (
           visibleSubjects.map((subject) => (
             <Link key={subject.id} href={`/yearly-past-paper/${subject.id}`} className="glass rounded-[28px] p-6 transition hover:-translate-y-0.5">
-              <p className="text-xs uppercase tracking-[0.35em] text-sky-300">{subject.group}</p>
-              <h2 className="mt-3 text-2xl font-semibold text-white">{subject.name}</h2>
-              <p className="mt-2 text-sm text-slate-300">Code {subject.code}</p>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
+              <p className="theme-accent text-xs uppercase tracking-[0.35em]">{subject.group}</p>
+              <h2 className="theme-text mt-3 text-2xl font-semibold">{subject.name}</h2>
+              <p className="theme-muted mt-2 text-sm">Code {subject.code}</p>
+              <p className="theme-muted mt-4 text-sm leading-7">
                 Open yearly sessions, paper variants, and exam resources.
               </p>
             </Link>
           ))
         ) : (
-          <div className="glass rounded-[28px] p-6 text-slate-200">
+          <div className="glass theme-text-soft rounded-[28px] p-6">
             No subjects found. Search ya filter change karke dobara try karein.
           </div>
         )}

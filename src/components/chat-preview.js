@@ -13,8 +13,8 @@ export default function ChatPreview() {
             key={`${message.role}-${index}`}
             className={`max-w-[88%] rounded-[24px] px-4 py-3 text-sm leading-7 ${
               message.role === "assistant"
-                ? "bg-white/5 text-slate-200"
-                : "ml-auto bg-sky-500 text-white"
+                ? "theme-surface theme-text-soft"
+                : "theme-button-primary ml-auto"
             }`}
           >
             {message.content}

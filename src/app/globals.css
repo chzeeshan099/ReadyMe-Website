@@ -2,14 +2,79 @@
 
 :root {
   --bg: #050814;
+  --bg-top: rgba(11, 123, 255, 0.22);
+  --bg-top-right: rgba(94, 178, 255, 0.12);
+  --bg-solid-start: #020611;
+  --bg-solid-mid: #050814;
+  --bg-solid-end: #07101f;
   --panel: rgba(12, 20, 38, 0.78);
   --panel-strong: #081226;
+  --panel-soft: rgba(255, 255, 255, 0.05);
+  --panel-contrast: #030916;
   --line: rgba(35, 92, 181, 0.38);
+  --line-strong: rgba(255, 255, 255, 0.1);
   --text: #f4f7ff;
+  --text-soft: #e2e8f0;
   --muted: #a7b4d1;
+  --muted-strong: #cbd5e1;
   --primary: #0b7bff;
   --primary-deep: #085fd1;
   --accent: #74c0ff;
+  --header: rgba(2, 6, 17, 0.8);
+  --shadow: 0 18px 80px rgba(0, 0, 0, 0.28);
+  --button-text: #ffffff;
+  --chip-text: #e8f3ff;
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-text: #f4f7ff;
+  --input-placeholder: #8da0c4;
+  --hero-card: rgba(7, 17, 32, 0.88);
+  --hero-panel: rgba(4, 11, 24, 0.88);
+  --hero-panel-strong: rgba(4, 11, 24, 0.92);
+  --hero-gradient: linear-gradient(180deg, rgba(8, 18, 36, 0.52), rgba(4, 10, 20, 0.86));
+  --hero-gradient-strong: linear-gradient(180deg, rgba(7, 16, 32, 0.8), rgba(4, 10, 20, 0.96));
+  --hero-gradient-soft: linear-gradient(180deg, rgba(7, 16, 32, 0.76), rgba(4, 10, 20, 0.98));
+  --hero-button: #1a6cff;
+  --hero-button-hover: #2c79ff;
+  --hero-icon-bg: rgba(11, 96, 255, 0.1);
+  --success-bg: rgba(16, 185, 129, 0.12);
+  --success-text: #d1fae5;
+}
+
+html[data-theme="light"] {
+  --bg: #edf4ff;
+  --bg-top: rgba(87, 145, 255, 0.18);
+  --bg-top-right: rgba(255, 255, 255, 0.45);
+  --bg-solid-start: #f9fbff;
+  --bg-solid-mid: #edf4ff;
+  --bg-solid-end: #ddeaff;
+  --panel: rgba(255, 255, 255, 0.84);
+  --panel-strong: #ffffff;
+  --panel-soft: rgba(17, 24, 39, 0.05);
+  --panel-contrast: #f7faff;
+  --line: rgba(59, 130, 246, 0.2);
+  --line-strong: rgba(148, 163, 184, 0.35);
+  --text: #0f172a;
+  --text-soft: #1e293b;
+  --muted: #475569;
+  --muted-strong: #334155;
+  --header: rgba(249, 251, 255, 0.82);
+  --shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  --button-text: #ffffff;
+  --chip-text: #0b3b78;
+  --input-bg: rgba(255, 255, 255, 0.9);
+  --input-text: #0f172a;
+  --input-placeholder: #64748b;
+  --hero-card: rgba(255, 255, 255, 0.92);
+  --hero-panel: rgba(255, 255, 255, 0.88);
+  --hero-panel-strong: rgba(255, 255, 255, 0.94);
+  --hero-gradient: linear-gradient(180deg, rgba(236, 244, 255, 0.95), rgba(225, 237, 255, 0.88));
+  --hero-gradient-strong: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(233, 242, 255, 0.9));
+  --hero-gradient-soft: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(237, 244, 255, 0.92));
+  --hero-button: #0b7bff;
+  --hero-button-hover: #085fd1;
+  --hero-icon-bg: rgba(11, 123, 255, 0.1);
+  --success-bg: rgba(16, 185, 129, 0.14);
+  --success-text: #065f46;
 }
 
 * {
@@ -24,11 +89,14 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(11, 123, 255, 0.22), transparent 34%),
-    radial-gradient(circle at top right, rgba(94, 178, 255, 0.12), transparent 25%),
-    linear-gradient(180deg, #020611 0%, #050814 55%, #07101f 100%);
+    radial-gradient(circle at top left, var(--bg-top), transparent 34%),
+    radial-gradient(circle at top right, var(--bg-top-right), transparent 25%),
+    linear-gradient(180deg, var(--bg-solid-start) 0%, var(--bg-solid-mid) 55%, var(--bg-solid-end) 100%);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 a {
@@ -44,7 +112,7 @@ a {
 .glass {
   background: var(--panel);
   border: 1px solid var(--line);
-  box-shadow: 0 18px 80px rgba(0, 0, 0, 0.28);
+  box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
 }
 
@@ -53,4 +121,128 @@ a {
     linear-gradient(rgba(119, 174, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(119, 174, 255, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+.theme-header {
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--header);
+}
+
+.theme-text {
+  color: var(--text);
+}
+
+.theme-text-soft {
+  color: var(--text-soft);
+}
+
+.theme-muted {
+  color: var(--muted);
+}
+
+.theme-muted-strong {
+  color: var(--muted-strong);
+}
+
+.theme-accent {
+  color: var(--accent);
+}
+
+.theme-surface {
+  background: var(--panel-soft);
+  border: 1px solid var(--line-strong);
+}
+
+.theme-surface-strong {
+  background: var(--panel-contrast);
+  border: 1px solid var(--line-strong);
+}
+
+.theme-chip {
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 24%, transparent);
+  color: var(--chip-text);
+}
+
+.theme-button-primary {
+  background: var(--primary);
+  color: var(--button-text);
+}
+
+.theme-button-primary:hover {
+  background: var(--primary-deep);
+}
+
+.theme-button-secondary {
+  background: var(--panel-soft);
+  border: 1px solid var(--line-strong);
+  color: var(--text-soft);
+}
+
+.theme-button-secondary:hover {
+  background: color-mix(in srgb, var(--panel-soft) 78%, var(--text) 8%);
+}
+
+.theme-input {
+  background: var(--input-bg);
+  border: 1px solid var(--line-strong);
+  color: var(--input-text);
+}
+
+.theme-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.theme-toggle {
+  background: var(--panel-soft);
+  border: 1px solid var(--line-strong);
+  color: var(--text-soft);
+}
+
+.theme-hero-card {
+  background: var(--hero-card);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
+}
+
+.theme-hero-panel {
+  background: var(--hero-panel);
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.theme-hero-panel-strong {
+  background: var(--hero-panel-strong);
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.theme-hero-gradient {
+  background: var(--hero-gradient);
+}
+
+.theme-hero-gradient-strong {
+  background: var(--hero-gradient-strong);
+}
+
+.theme-hero-gradient-soft {
+  background: var(--hero-gradient-soft);
+}
+
+.theme-hero-icon {
+  background: var(--hero-icon-bg);
+  color: var(--primary);
+  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.theme-hero-cta {
+  background: var(--hero-button);
+  color: #ffffff;
+}
+
+.theme-hero-cta:hover {
+  background: var(--hero-button-hover);
+}
+
+.theme-success {
+  background: var(--success-bg);
+  color: var(--success-text);
 }

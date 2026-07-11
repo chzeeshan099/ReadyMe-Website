@@ -1,23 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navLinks } from "@/lib/site-data";
+import { useTheme } from "@/components/theme-provider";
 
 export default function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { resolvedTheme, toggleTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#020611]/80 backdrop-blur-xl">
+    <header className="theme-header sticky top-0 z-50 backdrop-blur-xl">
       <div className="shell flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-3">
           <img src="/readyme-logo.png" alt="Ready Me" className="h-10 w-10 rounded-xl object-cover" />
           <div>
-            <div className="text-sm uppercase tracking-[0.35em] text-sky-300">Ready Me</div>
-            <div className="text-xs text-slate-300">Future of education</div>
+            <div className="theme-accent text-sm uppercase tracking-[0.35em]">Ready Me</div>
+            <div className="theme-muted text-xs">Future of education</div>
           </div>
         </Link>
 
@@ -29,7 +31,7 @@ export default function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 className={`rounded-full px-4 py-2 text-sm transition ${
-                  active ? "bg-sky-500 text-white" : "text-slate-300 hover:bg-white/5 hover:text-white"
+                  active ? "theme-button-primary" : "theme-button-secondary"
                 }`}
               >
                 {link.label}
@@ -38,18 +40,29 @@ export default function SiteHeader() {
           })}
         </nav>
 
-        <button
-          type="button"
-          onClick={() => setOpen((value) => !value)}
-          className="rounded-full border border-white/10 p-2 text-slate-100 md:hidden"
-          aria-label="Toggle navigation"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="theme-toggle rounded-full p-2 transition"
+            aria-label={resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setOpen((value) => !value)}
+            className="theme-toggle rounded-full p-2 md:hidden"
+            aria-label="Toggle navigation"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {open ? (
-        <div className="shell mb-4 rounded-3xl border border-white/10 bg-white/5 p-3 md:hidden">
+        <div className="theme-surface shell mb-4 rounded-3xl p-3 md:hidden">
           {navLinks.map((link) => {
             const active = pathname === link.href;
             return (
@@ -58,7 +71,7 @@ export default function SiteHeader() {
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className={`block rounded-2xl px-4 py-3 text-sm ${
-                  active ? "bg-sky-500 text-white" : "text-slate-200 hover:bg-white/5"
+                  active ? "theme-button-primary" : "theme-button-secondary"
                 }`}
               >
                 {link.label}

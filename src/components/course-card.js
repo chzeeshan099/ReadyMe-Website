@@ -5,19 +5,19 @@ export default function CourseCard({ course }) {
     <div className="glass rounded-[30px] p-6">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs uppercase tracking-[0.35em] text-sky-300">{course.level}</p>
-          <h3 className="mt-3 text-2xl font-semibold text-white">{course.title}</h3>
+          <p className="theme-accent text-xs uppercase tracking-[0.35em]">{course.level}</p>
+          <h3 className="theme-text mt-3 text-2xl font-semibold">{course.title}</h3>
         </div>
-        <span className="rounded-full border border-sky-300/20 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">
+        <span className="theme-chip rounded-full px-3 py-1 text-xs">
           {course.duration}
         </span>
       </div>
 
-      <p className="mt-4 text-sm leading-7 text-slate-300">{course.description}</p>
+      <p className="theme-muted mt-4 text-sm leading-7">{course.description}</p>
 
       <div className="mt-6 flex flex-wrap gap-2">
         {course.syllabus.map((item) => (
-          <span key={item} className="rounded-full bg-white/5 px-3 py-1 text-xs text-slate-200">
+          <span key={item} className="theme-surface theme-text-soft rounded-full px-3 py-1 text-xs">
             {item}
           </span>
         ))}
@@ -25,7 +25,7 @@ export default function CourseCard({ course }) {
 
       <Link
         href={`/courses/${course.slug}`}
-        className="mt-6 inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
+        className="theme-button-secondary mt-6 inline-flex rounded-full px-4 py-2 text-sm font-semibold transition"
       >
         View details
       </Link>
