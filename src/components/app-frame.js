@@ -4,11 +4,13 @@ import SiteHeader from "@/components/site-header";
 export default function AppFrame({ children }) {
   return (
     <>
+    <div className="max-w-[2000px] border border-green-500 mx-auto">
       <SiteHeader />
-      <main className="py-8 md:py-12">
-        <div className="shell space-y-8">{children}</div>
+      <main className="">
+        <div className="">{children}</div>
       </main>
-      <SiteFooter />
+      {/* <SiteFooter /> */}
+    </div>
     </>
   );
 }

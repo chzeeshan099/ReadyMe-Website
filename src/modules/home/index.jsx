@@ -4,7 +4,6 @@ const index = () => {
   return (
     <div>
       <HeroSection/>
-
     </div>
   )
 }
