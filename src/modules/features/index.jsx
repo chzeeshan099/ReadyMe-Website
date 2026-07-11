@@ -25,7 +25,7 @@ export default function FeaturesPage() {
       <div className="mx-auto w-[calc(100%-24px)] max-w-[1520px] py-6 sm:w-[calc(100%-32px)] lg:py-8">
 
           <div className="relative md:flex">
-            <div className="border border-green-500 w-full md:w-[60%]">
+            <div className="w-full md:w-[60%]">
               {/* <div className="flex flex-wrap gap-3">
                 {badges.map((badge) => {
                   const Icon = badge.icon;
@@ -73,7 +73,7 @@ export default function FeaturesPage() {
 
 
 
-            <div className="relative mx-auto w-full md:w-[40%] xl:max-w-none border border-red-500 pt-8">
+            <div className="relative mx-auto w-full md:w-[60%] lg:w-[50%] xl:max-w-none pt-8">
               <Image
                 src="/owner%20images/feature2.png"
                 alt="ReadyMe feature preview"
@@ -118,7 +118,7 @@ export default function FeaturesPage() {
             </div> */}
           </div>
 
-       {/* <Cards/> */}
+       <Cards/>
        {/* <Footer/> */}
 
       </div>

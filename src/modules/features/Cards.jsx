@@ -14,6 +14,13 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
+import { LiaFileAltSolid, LiaUserAstronautSolid } from 'react-icons/lia';
+import { FiSearch } from 'react-icons/fi';
+import { IoNewspaperOutline } from 'react-icons/io5';
+import { PiDevicesLight, PiRobot } from 'react-icons/pi';
+import { LuFilePen } from 'react-icons/lu';
+import { TbTargetArrow } from 'react-icons/tb';
+import Image from 'next/image';
 const featureCards = [
   {
     title: "20,000+ Notes",
@@ -21,10 +28,17 @@ const featureCards = [
     accent: "text-[#1180ff]",
     border: "border-[#1180ff]/30",
     glow: "shadow-[0_0_28px_rgba(17,128,255,0.16)]",
-    icon: FileText,
+    icon: LiaFileAltSolid ,
     preview: (
-      <div className="mt-6 flex h-[118px] items-end justify-center rounded-[24px] bg-[radial-gradient(circle_at_top,rgba(17,128,255,0.15),transparent_60%)]">
-        <div className="relative h-[82px] w-[134px] rounded-[18px] border border-[#155ee9]/35 bg-[#071328] before:absolute before:left-2 before:top-6 before:h-[54px] before:w-[54px] before:-rotate-[24deg] before:rounded-[14px] before:border before:border-[#156dff]/40 before:bg-[#071635] before:content-[''] after:absolute after:right-2 after:top-6 after:h-[54px] after:w-[54px] after:rotate-[24deg] after:rounded-[14px] after:border after:border-[#156dff]/40 after:bg-[#071635] after:content-['']" />
+      <div className="mt-6">
+      <Image
+        src="/book.png"
+        alt="ReadyMe feature book"
+        width={820}
+        height={920}
+        priority
+        className="h-auto w-full object-contain"
+    />
       </div>
     ),
   },
@@ -34,17 +48,17 @@ const featureCards = [
     accent: "text-[#9b45ff]",
     border: "border-[#9b45ff]/30",
     glow: "shadow-[0_0_28px_rgba(155,69,255,0.14)]",
-    icon: ScanSearch,
+    icon: FiSearch ,
     preview: (
-      <div className="mt-6 rounded-[18px] border border-white/8 bg-[#071328] p-4">
-        {["A", "B", "C", "D"].map((item) => (
-          <div key={item} className="mb-2 flex items-center gap-3 last:mb-0">
-            <span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#28406f] text-xs text-[#6687c7]">
-              {item}
-            </span>
-            <span className="h-2 flex-1 rounded-full bg-[#0e1b35]" />
-          </div>
-        ))}
+        <div className="mt-0">
+      <Image
+        src="/questions.png"
+        alt="ReadyMe feature question"
+        width={820}
+        height={920}
+        priority
+        className="h-auto w-full object-contain"
+    />
       </div>
     ),
   },
@@ -54,18 +68,17 @@ const featureCards = [
     accent: "text-[#1180ff]",
     border: "border-[#1180ff]/30",
     glow: "shadow-[0_0_28px_rgba(17,128,255,0.16)]",
-    icon: BriefcaseBusiness,
+    icon: IoNewspaperOutline ,
     preview: (
-      <div className="mt-6 flex h-[118px] items-end justify-center">
-        <div className="relative h-[86px] w-[132px] rounded-[22px] border border-[#156dff]/30 bg-[#071328]">
-          {[0, 1, 2, 3].map((item) => (
-            <div
-              key={item}
-              className="absolute bottom-5 h-[56px] w-[28px] rounded-[8px] border border-[#95bbff]/18 bg-[linear-gradient(180deg,#7eb0ff_0%,#2b4f88_100%)]"
-              style={{ left: `${18 + item * 20}px`, transform: `rotate(${item % 2 === 0 ? -12 : 10}deg)` }}
-            />
-          ))}
-        </div>
+    <div className="mt-0">
+      <Image
+        src="/paper.png"
+        alt="ReadyMe feature question"
+        width={820}
+        height={920}
+        priority
+        className="h-auto w-full object-contain"
+    />
       </div>
     ),
   },
@@ -76,20 +89,17 @@ const featureCards = [
     accent: "text-[#b94dff]",
     border: "border-[#b94dff]/30",
     glow: "shadow-[0_0_28px_rgba(185,77,255,0.14)]",
-    icon: Users,
+    icon: LiaUserAstronautSolid ,
     preview: (
-      <div className="mt-5 flex items-end justify-between gap-3">
-        <div className="flex -space-x-2">
-          {[0, 1, 2, 3, 4].map((item) => (
-            <div
-              key={item}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-[#1e2a45] bg-[linear-gradient(180deg,#2a2f3c_0%,#10192f_100%)] text-[10px] font-semibold text-white/80"
-            >
-              RM
-            </div>
-          ))}
-        </div>
-        <span className="rounded-full bg-[#b94dff] px-3 py-1 text-xs font-semibold text-white">LIVE</span>
+       <div className="mt-0">
+      <Image
+        src="/live session1.png"
+        alt="ReadyMe feature live session"
+        width={820}
+        height={920}
+        priority
+        className="h-auto w-full object-contain"
+    />
       </div>
     ),
   },
@@ -99,9 +109,9 @@ const featureCards = [
     accent: "text-[#1d8dff]",
     border: "border-[#1d8dff]/30",
     glow: "shadow-[0_0_28px_rgba(29,141,255,0.12)]",
-    icon: Bot,
+    icon: PiRobot ,
     preview: (
-      <div className="mt-6 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
+      <div className="mt-6 p-4">
         <div className="rounded-[14px] bg-[#101c31] px-4 py-3 text-sm text-white/86">
           Explain photosynthesis in simple words.
         </div>
@@ -121,16 +131,32 @@ const featureCards = [
     glow: "shadow-[0_0_28px_rgba(185,77,255,0.14)]",
     icon: NotebookPen,
     preview: (
-      <div className="mt-6 flex items-end gap-4 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
-        <div className="flex-1">
-          <p className="text-lg text-white">Mock Test</p>
-          <p className="text-sm text-white/56">Physics</p>
-          <p className="mt-2 text-sm font-medium text-[#20e4bf]">Great Performance!</p>
-        </div>
-        <div className="flex h-14 w-14 items-center justify-center rounded-full border-4 border-[#20e4bf]/85 text-lg font-bold text-[#20e4bf]">
-          85%
-        </div>
-      </div>
+     <div className="mt-6 flex min-h-[105px] w-full items-center justify-between rounded-[15px] border border-[#17345c] bg-[linear-gradient(135deg,#07101f_0%,#071426_55%,#06101f_100%)] px-4 py-3 shadow-[inset_0_0_20px_rgba(0,35,75,0.18)]">
+  {/* Left Content */}
+  <div className="flex flex-col">
+    <p className="text-[17px] font-medium leading-[22px] text-[#e4e8f5]">
+      Mock Test
+    </p>
+
+    <p className="text-[14px] font-normal leading-[20px] text-[#929cb3]">
+      Physics
+    </p>
+
+    <p className="mt-2 text-[14px] font-medium leading-[20px] text-[#08d9bd]">
+      Great Performance!
+    </p>
+  </div>
+
+  {/* Progress Circle */}
+  <div className="relative flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-[conic-gradient(#12dfbd_0deg_306deg,#17404c_306deg_360deg)]">
+    {/* Inner Circle */}
+    <div className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-[#071426]">
+      <span className="text-[18px] font-semibold text-[#16dec0]">
+        85%
+      </span>
+    </div>
+  </div>
+</div>
     ),
   },
   {
@@ -139,7 +165,7 @@ const featureCards = [
     accent: "text-[#2890ff]",
     border: "border-[#2890ff]/30",
     glow: "shadow-[0_0_28px_rgba(40,144,255,0.12)]",
-    icon: MessageCircleMore,
+    icon: LuFilePen ,
     preview: (
       <div className="mt-6 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
         <p className="text-sm font-medium text-white">My Notes</p>
@@ -159,7 +185,7 @@ const featureCards = [
     glow: "shadow-[0_0_28px_rgba(161,73,255,0.14)]",
     icon: Sparkles,
     preview: (
-      <div className="mt-6 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
+      <div className="mt-6 p-4">
         <p className="rounded-[14px] bg-[#101c31] px-4 py-3 text-sm text-white/86">
           Give me 5 tips to score A* in IGCSE Maths.
         </p>
@@ -179,20 +205,15 @@ const featureCards = [
     glow: "shadow-[0_0_28px_rgba(46,147,255,0.12)]",
     icon: Users,
     preview: (
-      <div className="mt-6 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
-        <p className="text-sm text-white/72">IGCSE Mathematics</p>
-        <p className="mt-1 text-xs text-white/50">12.5K Members</p>
-        <div className="mt-4 flex items-center justify-between">
-          <div className="flex -space-x-2">
-            {[0, 1, 2, 3].map((item) => (
-              <div
-                key={item}
-                className="h-8 w-8 rounded-full border border-[#1e2a45] bg-[linear-gradient(180deg,#efc1a2_0%,#9f5d47_100%)]"
-              />
-            ))}
-          </div>
-          <span className="text-xl text-white/85">+12.5K</span>
-        </div>
+      <div className="mt-6">
+      <Image
+        src="/community6.png"
+        alt="ReadyMe feature book"
+        width={820}
+        height={920}
+        priority
+        className="h-auto w-full object-contain border border-blue-500 rounded-xl"
+    />
       </div>
     ),
   },
@@ -202,22 +223,30 @@ const featureCards = [
     accent: "text-[#a74dff]",
     border: "border-[#a74dff]/30",
     glow: "shadow-[0_0_28px_rgba(167,77,255,0.14)]",
-    icon: CircleCheckBig,
+    icon: TbTargetArrow ,
     preview: (
-      <div className="mt-6 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
-        {[
-          ["Topic", "Trigonometry"],
-          ["Year", "2024"],
-        ].map(([label, value]) => (
-          <div key={label} className="mb-3 flex items-center justify-between last:mb-0">
-            <div>
-              <p className="text-xs text-white/45">{label}</p>
-              <p className="text-sm text-white/88">{value}</p>
-            </div>
-            <ChevronDown className="h-4 w-4 text-white/55" />
-          </div>
-        ))}
+     <div className="mt-2 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
+  {[
+    ["Topic", "Trigonometry"],
+    ["Year", "2024"],
+  ].map(([label, value], index) => (
+    <div
+      key={label}
+      className={`flex items-center justify-between ${
+        index === 0
+          ? "mb-2 border-b border-white/10 pb-3"
+          : ""
+      }`}
+    >
+      <div>
+        <p className="text-xs text-white/45">{label}</p>
+        <p className="text-sm text-white/88">{value}</p>
       </div>
+
+      <ChevronDown className="h-4 w-4 text-white/55" />
+    </div>
+  ))}
+</div>
     ),
   },
   {
@@ -228,18 +257,15 @@ const featureCards = [
     glow: "shadow-[0_0_28px_rgba(38,143,255,0.12)]",
     icon: ChartNoAxesCombined,
     preview: (
-      <div className="mt-6 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
-        <p className="text-xs text-white/45">This Week</p>
-        <p className="text-2xl font-bold text-[#0fa3ff]">78%</p>
-        <div className="mt-4 flex h-16 items-end gap-2">
-          {[18, 24, 36, 28, 22, 39, 34, 52].map((height) => (
-            <span
-              key={height}
-              className="flex-1 rounded-full bg-[linear-gradient(180deg,rgba(15,163,255,0.1),#0f7dff)]"
-              style={{ height: `${height}px` }}
-            />
-          ))}
-        </div>
+      <div className="mt-6">
+      <Image
+        src="/chart.png"
+        alt="ReadyMe feature book"
+        width={820}
+        height={920}
+        priority
+        className="h-auto w-full object-contain border border-blue-500 rounded-xl"
+    />
       </div>
     ),
   },
@@ -249,45 +275,25 @@ const featureCards = [
     accent: "text-[#9f52ff]",
     border: "border-[#9f52ff]/30",
     glow: "shadow-[0_0_28px_rgba(159,82,255,0.14)]",
-    icon: LaptopMinimalCheck,
+    icon: PiDevicesLight ,
     preview: (
-      <div className="mt-6 flex items-end justify-center gap-3 rounded-[18px] bg-[radial-gradient(circle_at_center,rgba(21,109,255,0.1),transparent_70%)] py-3">
-        <div className="h-10 w-8 rounded-[8px] border border-[#205eff]/35 bg-[#08152b]" />
-        <div className="flex h-14 w-20 items-end justify-center rounded-t-[10px] border border-[#205eff]/35 bg-[#08152b] pb-1">
-          <div className="h-1.5 w-10 rounded-full bg-[#175cff]" />
-        </div>
-        <div className="h-8 w-8 rounded-full border border-[#205eff]/35 bg-[#08152b]" />
+      <div className="mt-6">
+      <Image
+        src="/multi device.png"
+        alt="ReadyMe feature book"
+        width={820}
+        height={920}
+        priority
+        className="h-auto w-full object-contain border border-blue-500 rounded-xl"
+    />
       </div>
     ),
   },
-  {
-    title: "Exam Planner",
-    description: "Plan revision smarter with structured goals, schedules, and daily targets.",
-    accent: "text-[#1f8fff]",
-    border: "border-[#1f8fff]/30",
-    glow: "shadow-[0_0_28px_rgba(31,143,255,0.12)]",
-    icon: Bell,
-    preview: (
-      <div className="mt-6 rounded-[18px] border border-white/8 bg-[#0a1528] p-4">
-        <div className="flex items-center justify-between border-b border-white/8 pb-3">
-          <p className="text-sm font-medium text-white">Today&apos;s Plan</p>
-          <span className="rounded-full bg-[#10335d] px-2.5 py-1 text-[11px] text-[#66b6ff]">3 Tasks</span>
-        </div>
-        <div className="mt-3 space-y-2">
-          {["Math Revision", "Past Paper", "Mock Review"].map((item) => (
-            <div key={item} className="flex items-center gap-2 text-sm text-white/78">
-              <span className="h-2 w-2 rounded-full bg-[#1f8fff]" />
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-  },
+ 
 ];
 const Cards = () => {
   return (
-     <div className="relative mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+     <div className="relative grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {featureCards.map((card) => {
               const Icon = card.icon;
 
@@ -296,12 +302,12 @@ const Cards = () => {
                   key={card.title}
                   className={`min-h-[256px] rounded-[24px] border bg-[linear-gradient(180deg,rgba(8,16,31,0.96),rgba(4,9,18,0.98))] p-5 ${card.border} ${card.glow}`}
                 >
-                  <div className={`flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-[#091427] ${card.accent}`}>
-                    <Icon size={24} />
+                  <div className={`flex h-12 w-12 items-center justify-center ${card.accent}`}>
+                    <Icon size={32} />
                   </div>
-                  <h3 className={`mt-5 text-[1.05rem] font-semibold leading-7 ${card.accent}`}>{card.title}</h3>
+                  <h3 className={`mt-5 text-[1.3rem] font-semibold leading-7 ${card.accent}`}>{card.title}</h3>
                   {card.subtitle ? <p className="text-[0.95rem] text-white">{card.subtitle}</p> : null}
-                  <p className="mt-2 text-[0.95rem] leading-8 text-[#c3cee2]">{card.description}</p>
+                  <p className="mt-2 text-[0.95rem] leading-6 text-[#c3cee2c0]">{card.description}</p>
                   {card.preview}
                 </div>
               );
