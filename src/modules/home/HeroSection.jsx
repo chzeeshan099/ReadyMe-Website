@@ -15,7 +15,7 @@ const HeroSection = () => {
   return (
     <section className="overflow-hidden bg-[#010103]">
       <div className="mx-auto w-[calc(100%-24px)] max-w-[1680px] sm:w-[calc(100%-32px)]">
-        <div className="flex flex-col gap-2 py-8 md:flex-row md:items-start md:justify-between lg:gap-6 lg:py-12">
+        <div className="flex flex-col-reverse gap-2 py-8 md:flex-row md:items-start md:justify-between lg:gap-6 lg:py-12">
           <div className="w-full">
             <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-[11px] font-medium tracking-[0.2em] text-white/72 uppercase shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-md sm:px-5 sm:text-xs">
               <Rocket size={15} className="text-[#7c4dff]" />
@@ -29,7 +29,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="mt-5 text-base lg:text-xl font-medium tracking-[-0.04em] text-white/72">
+            <p className="sm:mt-5 text-base lg:text-xl font-medium tracking-[-0.04em] text-white/72">
               Smarter Learning. Stronger Results.
             </p>
 
