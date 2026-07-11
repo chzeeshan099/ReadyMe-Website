@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const navLinks = [
-  { href: "/dashboard", label: "Dashboard" },
+  { href: "/home", label: "Home" },
   { href: "/yearly-past-paper", label: "Yearly Past Papers" },
   { href: "/topics-past-paper", label: "Topical Past Papers" },
   { href: "/courses", label: "Courses" },
@@ -63,7 +63,7 @@ export const founderFeatures = [
   { title: "20,000+", subtitle: "Revision Notes", icon: NotebookPen },
 ];
 
-export const dashboardCards = [
+export const heroCards = [
   {
     title: "Today's Focus",
     description: "Chemistry revision, math worksheet, and one timed MCQ sprint.",

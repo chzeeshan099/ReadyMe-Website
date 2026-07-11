@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '@/modules/dashboard/HeroSection.jsx'
+import HeroSection from '@/modules/home/HeroSection.jsx'
 const index = () => {
   return (
     <div>
