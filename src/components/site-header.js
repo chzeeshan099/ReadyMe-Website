@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { useTheme } from "@/components/theme-provider";
 
 const navLinks = [
   { href: "/dashboard", label: "Home" },
@@ -18,7 +17,6 @@ const navLinks = [
 export default function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { resolvedTheme, toggleTheme } = useTheme();
 
   return (
     <header className="site-header-wrap sticky top-0 z-50 backdrop-blur-xl">
@@ -46,15 +44,6 @@ export default function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-4 md:flex">
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="theme-toggle rounded-full p-2 transition"
-              aria-label={resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-
             <Link href="/dashboard#pre-register" className="site-cta">
               <span>Pre-Register Now</span>
               <span aria-hidden="true" className="site-cta-arrow">{">"}</span>
@@ -62,15 +51,6 @@ export default function SiteHeader() {
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              type="button"
-              onClick={toggleTheme}
-              className="theme-toggle rounded-full p-2 transition"
-              aria-label={resolvedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
