@@ -29,13 +29,13 @@ export default function SiteHeader() {
         <div className="flex min-h-[82px] items-center justify-between gap-4 md:min-h-24 md:gap-6">
           <Link
             href="/home"
-            className="inline-flex shrink-0 items-baseline text-[2.2rem] leading-none font-extrabold tracking-[-0.04em] lg:text-5xl"
+            className="inline-flex shrink-0 items-baseline text-[2.2rem] lg:text-3xl leading-none font-extrabold tracking-[-0.04em] "
           >
             <span className="text-white">Ready</span>
             <span className="text-[#0B7BFF]">Me</span>
           </Link>
 
-          <nav className="hidden items-center gap-4 md:flex lg:gap-7 xl:gap-10">
+          <nav className="hidden items-center gap-4 lg:flex lg:gap-6 xl:gap-8">
             {navLinks.map((link) => {
               const active = pathname === link.href;
 
@@ -59,7 +59,7 @@ export default function SiteHeader() {
             })}
           </nav>
 
-          <div className="hidden shrink-0 items-center md:flex">
+          <div className="hidden shrink-0 items-center lg:flex">
             <ColorButton href="/pre-register">
               <span>Pre-Register Now</span>
               <ArrowRight size={20} />
@@ -70,7 +70,7 @@ export default function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((value) => !value)}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 lg:hidden"
             aria-label={open ? "Close navigation" : "Open navigation"}
             aria-expanded={open}
           >
@@ -80,7 +80,7 @@ export default function SiteHeader() {
       </div>
 
       {open && (
-        <div className="mx-auto mb-4 w-[calc(100%-32px)] max-w-[1180px] rounded-3xl border border-white/10 bg-[#081226]/95 p-3 shadow-2xl backdrop-blur-xl md:hidden">
+        <div className="mx-auto mb-4 w-[calc(100%-32px)] max-w-[1180px] rounded-3xl border border-white/10 bg-[#081226]/95 p-3 shadow-2xl backdrop-blur-xl lg:hidden">
           <nav className="space-y-1">
             {navLinks.map((link) => {
               const active = pathname === link.href;
