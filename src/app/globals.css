@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --color-blue: #0c41ff;
+}
+
 :root {
   --bg: #050814;
   --bg-top: rgba(11, 123, 255, 0.22);
