@@ -25,8 +25,8 @@ const featureCards = [
   {
     title: "20,000+ Notes",
     description: "Curated, exam-focused notes for every topic and subject.",
-    accent: "text-[#1180ff]",
-    border: "border-[#1180ff]/30",
+    accent: "text-blue",
+    border: "border-blue",
     glow: "shadow-[0_0_28px_rgba(17,128,255,0.16)]",
     icon: LiaFileAltSolid ,
     preview: (
@@ -45,8 +45,8 @@ const featureCards = [
   {
     title: "850,000+ Topical Questions",
     description: "Practice unlimited topical questions with detailed solutions.",
-    accent: "text-[#9b45ff]",
-    border: "border-[#9b45ff]/30",
+    accent: "text-purple",
+    border: "border-purple",
     glow: "shadow-[0_0_28px_rgba(155,69,255,0.14)]",
     icon: FiSearch ,
     preview: (
@@ -65,8 +65,8 @@ const featureCards = [
   {
     title: "40,000+ Past Papers",
     description: "Access past papers from different years and exam boards.",
-    accent: "text-[#1180ff]",
-    border: "border-[#1180ff]/30",
+    accent: "text-blue",
+    border: "border-blue",
     glow: "shadow-[0_0_28px_rgba(17,128,255,0.16)]",
     icon: IoNewspaperOutline ,
     preview: (
@@ -86,8 +86,8 @@ const featureCards = [
     title: "Live Classes",
     subtitle: "from 10-30+ Years Experienced Teachers",
     description: "Learn live from the best. Ask questions. Get clarity. Boost confidence.",
-    accent: "text-[#b94dff]",
-    border: "border-[#b94dff]/30",
+    accent: "text-purple",
+    border: "border-purple",
     glow: "shadow-[0_0_28px_rgba(185,77,255,0.14)]",
     icon: LiaUserAstronautSolid ,
     preview: (
@@ -106,8 +106,8 @@ const featureCards = [
   {
     title: "AI Study Assistant",
     description: "Get instant help with explanations, summaries, and study guidance.",
-    accent: "text-[#1d8dff]",
-    border: "border-[#1d8dff]/30",
+    accent: "text-blue",
+    border: "border-blue",
     glow: "shadow-[0_0_28px_rgba(29,141,255,0.12)]",
     icon: PiRobot ,
     preview: (
@@ -126,8 +126,8 @@ const featureCards = [
   {
     title: "AI Mock Maker & Test Maker",
     description: "Create custom mocks. Real-time checking, smart evaluation.",
-    accent: "text-[#b94dff]",
-    border: "border-[#b94dff]/30",
+    accent: "text-purple",
+    border: "border-purple",
     glow: "shadow-[0_0_28px_rgba(185,77,255,0.14)]",
     icon: NotebookPen,
     preview: (
@@ -162,8 +162,8 @@ const featureCards = [
   {
     title: "Smart Notes",
     description: "Make smart, beautiful notes. Organize, revise, and optimize learning.",
-    accent: "text-[#2890ff]",
-    border: "border-[#2890ff]/30",
+    accent: "text-blue",
+    border: "border-blue",
     glow: "shadow-[0_0_28px_rgba(40,144,255,0.12)]",
     icon: LuFilePen ,
     preview: (
@@ -180,8 +180,8 @@ const featureCards = [
   {
     title: "ReadyMeGPT",
     description: "Your personal AI study partner. Ask anything, learn everything.",
-    accent: "text-[#a149ff]",
-    border: "border-[#a149ff]/30",
+    accent: "text-purple",
+    border: "border-purple",
     glow: "shadow-[0_0_28px_rgba(161,73,255,0.14)]",
     icon: Sparkles,
     preview: (
@@ -200,8 +200,8 @@ const featureCards = [
   {
     title: "Subject-wise Communities",
     description: "Connect with students worldwide. Share, learn, grow together.",
-    accent: "text-[#2e93ff]",
-    border: "border-[#2e93ff]/30",
+    accent: "text-blue",
+    border: "border-blue",
     glow: "shadow-[0_0_28px_rgba(46,147,255,0.12)]",
     icon: Users,
     preview: (
@@ -220,8 +220,8 @@ const featureCards = [
   {
     title: "Topical & Past Paper Practice",
     description: "Filter by topic, year, board and level. Practice your way.",
-    accent: "text-[#a74dff]",
-    border: "border-[#a74dff]/30",
+    accent: "text-purple",
+    border: "border-purple",
     glow: "shadow-[0_0_28px_rgba(167,77,255,0.14)]",
     icon: TbTargetArrow ,
     preview: (
@@ -252,8 +252,8 @@ const featureCards = [
   {
     title: "Progress Tracker",
     description: "Track your progress, analyze performance, and stay ahead.",
-    accent: "text-[#268fff]",
-    border: "border-[#268fff]/30",
+    accent: "text-blue",
+    border: "border-blue",
     glow: "shadow-[0_0_28px_rgba(38,143,255,0.12)]",
     icon: ChartNoAxesCombined,
     preview: (
@@ -272,8 +272,8 @@ const featureCards = [
   {
     title: "Multi-Device Sync",
     description: "Study anywhere, anytime. Your progress, always in sync.",
-    accent: "text-[#9f52ff]",
-    border: "border-[#9f52ff]/30",
+    accent: "text-purple",
+    border: "border-purple",
     glow: "shadow-[0_0_28px_rgba(159,82,255,0.14)]",
     icon: PiDevicesLight ,
     preview: (

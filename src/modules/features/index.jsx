@@ -119,7 +119,7 @@ export default function FeaturesPage() {
           </div>
 
        <Cards/>
-       {/* <Footer/> */}
+       <Footer/>
 
       </div>
     </section>

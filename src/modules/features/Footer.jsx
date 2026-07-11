@@ -9,6 +9,7 @@ import {
   Trophy,
   Zap,
 } from "lucide-react";
+import Link from 'next/link';
 const bottomHighlights = [
   { icon: Zap, text: "Distraction Free Learning" },
   { icon: ShieldCheck, text: "Secure & Safe Platform" },
@@ -23,23 +24,23 @@ const appBadges = [
 ];
 const Footer = () => {
   return (
-     <div className="relative mt-4 grid gap-4 xl:grid-cols-[minmax(0,2.1fr)_minmax(260px,0.8fr)_minmax(260px,0.8fr)]">
-            <div className="grid gap-3 rounded-[24px] border border-[#16325c] bg-[#040b17]/90 p-4 sm:grid-cols-2 xl:grid-cols-6">
+     <div className="relative mt-4">
+            <div className="grid gap-2 rounded-[24px] border border-[#16325c] bg-[#040b17]/90 py-4 px-2 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
             {bottomHighlights.map((item) => {
               const Icon = item.icon;
 
               return (
-                <div key={item.text} className="flex items-center gap-3 rounded-2xl border border-white/6 bg-white/[0.02] px-4 py-3">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#091427] text-[#2c74ff]">
+                <div key={item.text} className="flex items-center gap-2  px-1 py-3">
+                  <span className="flex h-11 w-11 items-center justify-center text-blue">
                     <Icon size={21} />
                   </span>
-                  <p className="text-sm leading-6 text-white/84">{item.text}</p>
+                  <p className="text-xs md:text-sm leading-5 text-white/84">{item.text}</p>
                 </div>
               );
             })}
           </div>
 
-            <div className="rounded-[24px] border border-[#16325c] bg-[#040b17]/90 p-5">
+            {/* <div className="rounded-[24px] border border-[#16325c] bg-[#040b17]/90 p-5">
               <p className="text-center text-sm font-semibold uppercase tracking-[0.22em] text-white/56">Coming Soon On</p>
               <div className="mt-5 grid gap-3">
                 {appBadges.map((badge) => (
@@ -57,9 +58,9 @@ const Footer = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
-            <div className="rounded-[24px] border border-[#16325c] bg-[linear-gradient(180deg,rgba(10,17,33,0.96),rgba(5,11,22,1))] p-5">
+            {/* <div className="rounded-[24px] border border-[#16325c] bg-[linear-gradient(180deg,rgba(10,17,33,0.96),rgba(5,11,22,1))] p-5">
               <div className="mb-4 flex items-center justify-center gap-3 text-[#0b8dff]">
                 <ArrowUpRight size={20} />
                 <span className="h-px flex-1 bg-[linear-gradient(90deg,transparent,#235cff,transparent)]" />
@@ -74,7 +75,7 @@ const Footer = () => {
               >
                 Pre-Register Now
               </Link>
-            </div>
+            </div> */}
           </div>
   )
 }
