@@ -7,6 +7,7 @@ import { LuBot, LuShoppingBag } from "react-icons/lu";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { GiNewspaper } from "react-icons/gi";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
+import Hero from "./Hero";
 
 const missionReasons = [
   "To end expensive tuitions.",
@@ -28,7 +29,8 @@ const promiseItems = [
 export default function StrugglePage() {
   return (
     <>
-          <div className="relative px-4 py-4 sm:px-6 lg:px-8">
+          <div className="relative">
+            <Hero/>
 
             {/* cards */}
             <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
