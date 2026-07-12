@@ -24,8 +24,8 @@ const Footer = () => {
               const Icon = item.icon;
 
               return (
-                <div key={item.text} className="flex items-center gap-2  px-1 py-3">
-                  <span className="flex h-11 w-11 items-center justify-center text-blue">
+                <div key={item.text} className="group flex items-center gap-2  px-1 py-3">
+                  <span className="flex h-11 w-11 items-center justify-center text-blue custom-hover">
                     <Icon size={21} />
                   </span>
                   <p className="text-xs md:text-sm leading-5 text-white/84">{item.text}</p>

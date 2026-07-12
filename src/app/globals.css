@@ -292,3 +292,12 @@ a {
   background: var(--success-bg);
   color: var(--success-text);
 }
+
+
+
+
+
+
+@utility custom-hover {
+  @apply transition-transform duration-300 ease-in-out group-hover:scale-125;
+}

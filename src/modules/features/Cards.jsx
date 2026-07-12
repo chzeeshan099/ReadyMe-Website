@@ -300,9 +300,9 @@ const Cards = () => {
               return (
                 <div
                   key={card.title}
-                  className={`min-h-[256px] rounded-[24px] border bg-[linear-gradient(180deg,rgba(8,16,31,0.96),rgba(4,9,18,0.98))] p-5 ${card.border} ${card.glow}`}
+                  className={`group min-h-[256px] rounded-[24px] border bg-[linear-gradient(180deg,rgba(8,16,31,0.96),rgba(4,9,18,0.98))] p-5 ${card.border} ${card.glow}`}
                 >
-                  <div className={`flex h-12 w-12 items-center justify-center ${card.accent}`}>
+                  <div className={`flex h-12 w-12 items-center justify-center custom-hover ${card.accent}`}>
                     <Icon size={32} />
                   </div>
                   <h3 className={`mt-5 text-[1.3rem] font-semibold leading-7 ${card.accent}`}>{card.title}</h3>

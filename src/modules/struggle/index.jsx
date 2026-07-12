@@ -89,12 +89,12 @@ export default function StrugglePage() {
                   return (
                     <div
                       key={item.title}
-                       className={`sm:border-r px-2 last:border-r-0 xl:pr-4 ${
+                       className={`group sm:border-r px-2 last:border-r-0 xl:pr-4 ${
                        isEven ? "border-blue" : "border-purple-500"
                      }`}
                      >
                       <Icon
-                         className={`h-6 sm:h-8 w-6 sm:w-8 ${
+                         className={`h-6 sm:h-8 w-6 sm:w-8 custom-hover ${
                          isEven ? "text-blue" : "text-purple-500"
                          }`}
                          strokeWidth={1.7}

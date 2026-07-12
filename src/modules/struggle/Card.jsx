@@ -69,13 +69,13 @@ export default function Card() {
           return (
             <div
               key={card.title.join(" ")}
-              className={`h-full flex flex-col items-center justify-between rounded-[22px] xl:rounded-none px-3 sm:px-4  xl:px-2.5 py-4  xl:py-3 text-center  ${
+              className={`group h-full flex flex-col items-center justify-between rounded-[22px] xl:rounded-none px-3 sm:px-4  xl:px-2.5 py-4  xl:py-3 text-center  ${
                 showDivider ? "xl:border-r xl:border-[#10284f]" : ""
               }`}
             >
             <div>
               <div className="flex justify-center">
-                <Icon className={`h-10 w-10 text-purple`}  />
+                <Icon className={`h-10 w-10 text-purple custom-hover`}  />
               </div>
 
               <h3 className="mt-4 text-[1rem] font-semibold uppercase leading-8 text-white sm:text-[1.1rem]">
