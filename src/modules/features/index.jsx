@@ -21,7 +21,7 @@ const appBadges = [
 
 export default function FeaturesPage() {
   return (
-    <section className="overflow-hidden bg-[#010103] text-white">
+    <section className="overflow-hidden bg-black text-white">
       <div className="mx-auto w-[calc(100%-24px)] max-w-[1520px] py-6 sm:w-[calc(100%-32px)] lg:py-8">
 
           <div className="relative md:flex">

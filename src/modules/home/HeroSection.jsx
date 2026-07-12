@@ -13,7 +13,7 @@ const appBadges = [
 
 const HeroSection = () => {
   return (
-    <section className="overflow-hidden bg-[#010103]">
+    <section className="overflow-hidden bg-black">
       <div className="mx-auto w-[calc(100%-24px)] max-w-[1680px] sm:w-[calc(100%-32px)]">
         <div className="flex flex-col-reverse gap-2 py-8 md:flex-row md:items-start md:justify-between lg:gap-6 lg:py-12">
           <div className="w-full">

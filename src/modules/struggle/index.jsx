@@ -2,9 +2,9 @@ import React from 'react'
 
 const index = () => {
   return (
-    <div>
-      <p> This is struggle page.</p>
-    </div>
+   <section className="overflow-hidden bg-black">
+     <p>This is struggle page.</p>
+    </section>
   )
 }
 
