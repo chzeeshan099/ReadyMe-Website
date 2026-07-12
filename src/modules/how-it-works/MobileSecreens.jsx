@@ -55,10 +55,6 @@ const steps = [
   },
 ];
 
-
-
-
-
 export default function MobileSecreens() {
   return (
     <div className="relative rounded-[30px] border border-blue bg-[linear-gradient(180deg,rgba(4,11,24,0.96),rgba(3,9,18,0.98))] px-4 py-5 shadow-[0_24px_60px_rgba(0,0,0,0.3)] sm:px-5 lg:px-6">
