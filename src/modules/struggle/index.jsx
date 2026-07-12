@@ -8,6 +8,7 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { GiNewspaper } from "react-icons/gi";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import Hero from "./Hero";
+import Card from "./Card";
 
 const missionReasons = [
   "To end expensive tuitions.",
@@ -31,6 +32,7 @@ export default function StrugglePage() {
     <>
           <div className="relative">
             <Hero/>
+            <Card/>
 
             {/* cards */}
             <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
