@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/features", label: "Features" },
   { href: "/communities", label: "Communities" },
+  { href: "/struggle", label: "Struggle" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/founder", label: "About Founder & CEO" },
 ];
@@ -24,18 +25,18 @@ export default function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/20 bg-[#020714]/90 backdrop-blur-xl">
-      <div className="mx-auto w-[calc(100%-32px)] max-w-[1180px]">
-        <div className="flex min-h-[65px] items-center justify-between gap-4 lg:min-h-24 md:gap-6">
+    <header className="sticky top-0 z-50 border-b border-white/20 bg-[#020714]/90 backdrop-blur-xl ">
+      <div className="mx-auto w-[calc(100%-32px)] max-w-[1500px]">
+        <div className="flex min-h-[65px] items-center justify-between gap-4 lg:min-h-24 md:gap-3">
           <Link
             href="/home"
-            className="inline-flex shrink-0 items-baseline text-3xl leading-none font-extrabold tracking-[-0.04em] "
+            className="inline-flex shrink-0 items-baseline  text-2xl leading-none font-extrabold tracking-[-0.04em] "
           >
             <span className="text-white">Ready</span>
             <span className="text-[#0B7BFF]">Me</span>
           </Link>
 
-          <nav className="hidden items-center gap-4 lg:flex lg:gap-6 xl:gap-8">
+          <nav className="hidden items-center gap-4 lg:flex lg:gap-4 xl:gap-8">
             {navLinks.map((link) => {
               const active = pathname === link.href;
 
@@ -61,8 +62,8 @@ export default function SiteHeader() {
 
           <div className="hidden shrink-0 items-center lg:flex">
             <ColorButton href="/pre-register">
-              <span>Pre-Register Now</span>
-              <ArrowRight size={20} />
+              <span className="text-sm">Pre-Register Now</span>
+              <ArrowRight size={18} />
             </ColorButton>
            
           </div>
