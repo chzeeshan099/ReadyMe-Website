@@ -26,10 +26,10 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/20 bg-[#020714]/90 backdrop-blur-xl">
       <div className="mx-auto w-[calc(100%-32px)] max-w-[1180px]">
-        <div className="flex min-h-[82px] items-center justify-between gap-4 md:min-h-24 md:gap-6">
+        <div className="flex min-h-[65px] items-center justify-between gap-4 lg:min-h-24 md:gap-6">
           <Link
             href="/home"
-            className="inline-flex shrink-0 items-baseline text-[2.2rem] lg:text-3xl leading-none font-extrabold tracking-[-0.04em] "
+            className="inline-flex shrink-0 items-baseline text-3xl leading-none font-extrabold tracking-[-0.04em] "
           >
             <span className="text-white">Ready</span>
             <span className="text-[#0B7BFF]">Me</span>

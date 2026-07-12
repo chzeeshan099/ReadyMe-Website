@@ -293,7 +293,7 @@ const featureCards = [
 ];
 const Cards = () => {
   return (
-     <div className="relative grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+     <div className="relative mt-3 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {featureCards.map((card) => {
               const Icon = card.icon;
 
