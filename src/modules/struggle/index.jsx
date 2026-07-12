@@ -27,8 +27,7 @@ const promiseItems = [
 
 export default function StrugglePage() {
   return (
-    <section className="overflow-hidden bg-[#02050d] text-white">
-      <div className="mx-auto w-[calc(100%-18px)] max-w-[1540px] py-5 sm:w-[calc(100%-28px)]">
+    <>
           <div className="relative px-4 py-4 sm:px-6 lg:px-8">
 
             {/* cards */}
@@ -108,7 +107,6 @@ export default function StrugglePage() {
             </div>
 
           </div>
-        </div>
-    </section>
+    </>
   );
 }

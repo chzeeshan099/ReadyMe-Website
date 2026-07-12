@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Code2, Rocket, Sparkles } from "lucide-react";
-import { AiOutlineApple } from "react-icons/ai";
+import { ArrowRight, Code2, Rocket } from "lucide-react";
 import ColorButton from "@/components/ColorButton";
 import SimpleButton from "@/components/SimpleButton";
 
@@ -13,8 +11,7 @@ const appBadges = [
 
 const HeroSection = () => {
   return (
-    <section className="overflow-hidden bg-black">
-      <div className="mx-auto w-[calc(100%-24px)] max-w-[1680px] sm:w-[calc(100%-32px)]">
+    <>
         <div className="flex flex-col-reverse gap-2 py-8 md:flex-row md:items-start md:justify-between lg:gap-6 lg:py-12">
           <div className="w-full">
             <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-3 text-[11px] font-medium tracking-[0.2em] text-white/72 uppercase shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur-md sm:px-5 sm:text-xs">
@@ -43,13 +40,6 @@ const HeroSection = () => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 px-8 sm:px-0">
-              {/* <Link
-                href="/pre-register"
-                className="inline-flex min-h-16 items-center justify-center gap-2 lg:gap-3 rounded-[18px] bg-[linear-gradient(90deg,#6f2cff_0%,#0b7bff_100%)] px-4 lg:px-8 text-sm lg:text-lg font-semibold text-white shadow-[0_18px_50px_rgba(23,92,255,0.35)] transition duration-200 hover:-translate-y-0.5 hover:brightness-105"
-              >
-                <span>Pre-Register Now</span>
-                <ArrowRight size={22} />
-              </Link> */}
                <ColorButton href="/pre-register">
               <span>Pre-Register Now</span>
               <ArrowRight size={20} />
@@ -174,8 +164,7 @@ const HeroSection = () => {
               </p>
             </div>
            </div>
-      </div>
-    </section>
+    </>
   );
 };
 
