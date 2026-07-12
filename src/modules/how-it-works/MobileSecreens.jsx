@@ -1,3 +1,4 @@
+import ColorButton from "@/components/ColorButton";
 import {
   ArrowRight,
 } from "lucide-react";
@@ -61,9 +62,13 @@ const steps = [
 export default function MobileSecreens() {
   return (
     <div className="relative rounded-[30px] border border-blue bg-[linear-gradient(180deg,rgba(4,11,24,0.96),rgba(3,9,18,0.98))] px-4 py-5 shadow-[0_24px_60px_rgba(0,0,0,0.3)] sm:px-5 lg:px-6">
-         <div className="absolute -top-4.5 sm:-top-7 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-[16px] bg-[linear-gradient(90deg,#1274ff_0%,#7d2eff_100%)] px-4 py-3 text-center text-[0.5rem] font-semibold uppercase tracking-[0.04em] text-white shadow-[0_18px_40px_rgba(35,92,255,0.3)] sm:px-6 sm:text-[1.1rem]">
-            Pre-Register Now &amp; Get 50% OFF
+       
+         <div className="absolute -top-4.5 sm:-top-7 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap uppercase tracking-[0.04em]">
+          <ColorButton>
+            <p>Pre-Register Now &amp; Get 50% OFF</p>
+          </ColorButton>
          </div>
+
       <div className="mt-2 grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 xl:gap-0">
         {steps.map((step, index) => {
 
