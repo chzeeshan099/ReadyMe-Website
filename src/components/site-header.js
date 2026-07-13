@@ -8,12 +8,13 @@ import ColorButton from "@/components/ColorButton";
 
 const navLinks = [
   { href: "/home", label: "Home" },
-  // { href: "/about", label: "About" },
   { href: "/features", label: "Features" },
   { href: "/communities", label: "Communities" },
   { href: "/struggle", label: "Struggle" },
+  { href: "/live-classes", label: "Live Classes" },
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/about", label: "About Founder & CEO" },
+  { href: "/about", label: "About Founder" },
+  // { href: "/about", label: "About Founder & CEO" },
 ];
 
 export default function SiteHeader() {
