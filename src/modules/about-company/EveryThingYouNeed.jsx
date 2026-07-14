@@ -55,7 +55,7 @@ const EveryThingYouNeedCards = [
 export default function EveryThingYouNeed() {
   return (
     <div className="mt-4 mb-4 p-3 sm:p-4 lg:p-5">
-      <h1 className="text-lg sm:text-2xl md:text-4xl font-semibold mb-4">EveryThing You Need. <span className="text-blue">All In One Place.</span></h1>
+      <h1 className="text-lg sm:text-2xl md:text-4xl font-semibold mb-4 uppercase">EveryThing You Need. <span className="text-blue">All In One Place.</span></h1>
       <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {EveryThingYouNeedCards.map((card, index) => {
           const Icon = card.icon;
