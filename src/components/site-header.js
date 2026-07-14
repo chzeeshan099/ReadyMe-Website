@@ -13,7 +13,7 @@ const navLinks = [
   { href: "/struggle", label: "Struggle" },
   { href: "/live-classes", label: "Live Classes" },
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/about", label: "About Founder" },
+  { href: "/about-founder", label: "About Founder" },
   // { href: "/about", label: "About Founder & CEO" },
 ];
 
