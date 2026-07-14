@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
 import Card from './Card'
+import EveryThingYouNeed from './EveryThingYouNeed'
 
 const index = () => {
   return (
@@ -8,6 +9,7 @@ const index = () => {
      <div>
         <Hero/>
         <Card/>
+        <EveryThingYouNeed/>
      </div>
    </>
   )
