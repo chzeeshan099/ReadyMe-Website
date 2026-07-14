@@ -37,7 +37,7 @@ const Mission = () => {
  }`}
               >
                 <div
-                  className={`flex h-[30px] sm:h-[48px] w-[30px] sm:w-[48px] shrink-0 items-center justify-center rounded-full border bg-[radial-gradient(circle_at_center,rgba(19,28,58,0.9)_0%,rgba(7,14,28,0.98)_72%)] ${item.iconClassName}`}
+                  className={`flex h-7.5 sm:h-12 w-7.5 sm:w-12 shrink-0 items-center justify-center rounded-full border bg-[radial-gradient(circle_at_center,rgba(19,28,58,0.9)_0%,rgba(7,14,28,0.98)_72%)] ${item.iconClassName}`}
                 >
                   <Icon className="w-4 h-4 sm:w-6 sm:h-6" strokeWidth={2} />
                 </div>
