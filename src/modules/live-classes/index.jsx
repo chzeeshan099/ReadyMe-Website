@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Features from './Features'
 const index = () => {
   return (
     <>
     <div>
-      <p>This is live classes page</p>
+      <Features/>
     </div>
     </>
   )
