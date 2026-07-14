@@ -1,10 +1,11 @@
 import React from 'react'
+import Hero from './Hero'
 
 const index = () => {
   return (
    <>
      <div>
-        <p>This is about company page.</p>
+        <Hero/>
      </div>
    </>
   )
