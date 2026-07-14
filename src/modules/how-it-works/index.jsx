@@ -1,9 +1,11 @@
 import Image from "next/image";
 import MobileSecreens from "./MobileSecreens";
+import { Reveal } from "@/components/motion-system";
 
 export default function HowItWorksPage() {
   return (
         <div className="overflow-hidden">
+            <Reveal direction="left">
             <div className="flex items-center justify-between gap-1 sm:gap-3 -mt-2 lg:-mt-3">
               <div className="text-center lg:text-left w-[17%]">
                 <Image
@@ -43,9 +45,12 @@ export default function HowItWorksPage() {
                 />
               </div>
             </div>
-            <div className="mt-8">
-              <MobileSecreens />
-            </div>
+            </Reveal>
+            <Reveal delay={0.08} direction="right">
+              <div className="mt-8">
+                <MobileSecreens />
+              </div>
+            </Reveal>
         </div>
   );
 }

@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Subjects from "./Subjects";
 import FeaturePoints from "./FeaturePoints";
+import { Reveal } from "@/components/motion-system";
 
 export default function CommunitiesPage() {
   return (
         <div className="">
 
+          <Reveal direction="left">
           <div className="flex flex-col md:flex-row items-center justify-between gap-1">
             <div className="w-full md:w-[40%] lg:-mt-8">
            
@@ -42,11 +44,16 @@ export default function CommunitiesPage() {
               />
             </div>
           </div>
+          </Reveal>
 
 
-            
-             <FeaturePoints/>
-             <Subjects/>
+             
+             <Reveal delay={0.05} direction="right">
+               <FeaturePoints/>
+             </Reveal>
+             <Reveal delay={0.1} direction="bottom">
+               <Subjects/>
+             </Reveal>
 
               {/* <div className="mt-6 grid gap-5 rounded-[28px] border border-[#16325a] bg-[linear-gradient(180deg,rgba(5,11,24,0.94),rgba(3,8,18,0.98))] px-6 py-6 shadow-[0_20px_50px_rgba(0,0,0,0.24)] lg:grid-cols-[128px_minmax(0,1fr)_320px]">
                 <div className="flex md:items-center justify-center text-[#8a4dff]">

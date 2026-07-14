@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Cards from "./Cards";
 import Footer from "./Footer";
+import { Reveal } from "@/components/motion-system";
 
 
 export default function FeaturesPage() {
   return (
     <>
+          <Reveal direction="left">
           <div className="relative md:flex">
             <div className="w-full md:w-[60%]">
 
@@ -41,9 +43,14 @@ export default function FeaturesPage() {
               />
             </div>
           </div>
+          </Reveal>
 
-       <Cards/>
-       <Footer/>
+       <Reveal delay={0.06} direction="right">
+         <Cards/>
+       </Reveal>
+       <Reveal delay={0.12} direction="bottom">
+         <Footer/>
+       </Reveal>
     </>
   );
 }
