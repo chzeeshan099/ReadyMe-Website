@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa6'
 
 const Hero = () => {
   return (
@@ -12,6 +13,18 @@ const Hero = () => {
                      Learn More. <span className="text-blue">Achieve More.</span>
                    </p>
                  </div>
+
+
+                 {/* <br/>
+                 
+                 <div className='border border-blue inline-block rounded-2xl p-2 font-semibold mt-2'>
+                  <FaQuoteLeft className='mb-1 text-blue'/>
+                   <p className='text-sm'> Your Success</p> 
+                   <p className='text-blue text-base'>Our Mission.</p>
+                  <div className='flex items-center justify-end'>
+                    <FaQuoteRight className='mt-1 text-blue'/>
+                  </div>
+                 </div> */}
    
                  <h1 className="mt-8 text-[35px] md:text-5xl lg:text-6xl font-semibold text-white">
                    About Ready 
@@ -24,6 +37,8 @@ const Hero = () => {
                   ReadyMe is an all in one AI-powered learning platform built for  <span className='text-blue'>IGCSE, O Levels, and A Levels (AS & A2)</span> students.
                   We bring everything you need to learn, practice, and succeed all in one place.
                  </p>
+
+                 
    
                
                </div>
