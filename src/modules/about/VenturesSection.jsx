@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const ventures = [
   { image: "/readyMe logo.png", text: "AI-powered learning platform for students." },
-  { image: "/hibread.png", text: "Shaping the future through education." },
-  { image: "/paradox.png", text: "Empowering youth through leadership & diplomacy." },
-  { image: "/paradox-event.png", text: "Delivering remarkable events & experiences." },
+  { image: "/ankahi-logo.png", text: "Every Thread Holds,An Untold Story." },
+  { image: "/paradox-logo.png", text: "Empowering youth through leadership & diplomacy." },
+  { image: "/paradox-logo.png", text: "Delivering remarkable events & experiences." },
   { image: "/airoplan.png", text: "Many more exciting ventures in progress." },
 ];
 
@@ -27,7 +27,7 @@ export default function VenturesSection() {
                  height={724}
                  priority
                  quality={100}
-                 className="h-auto w-[100px] object-contain"
+                 className="h-25 w-25 object-contain"
                />
               <p className="mt-4 text-textWhiteLight">{item.text}</p>
             </div>

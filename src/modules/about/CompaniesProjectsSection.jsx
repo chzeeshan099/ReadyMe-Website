@@ -6,15 +6,19 @@ const companies = [
     text: "AI-Powered learning platform for IGCSE, O Levels & A Levels students.",
   },
   {
-    image: "/hibread.png",
-    text: "Empowering students with quality education & futuristic learning.",
+    image: "/ankahi-logo.png",
+    text: "Elevating everyday style with premium clothing made for confidence and comfort.",
   },
+  // {
+  //   image: "/hibread.png",
+  //   text: "Empowering students with quality education & futuristic learning.",
+  // },
   {
-    image: "/paradox.png",
+    image: "/paradox-logo.png",
     text: "Building young leaders through diplomacy, debates & global exposure.",
   },
   {
-    image: "/paradox-event.png",
+    image: "/paradox-logo.png",
     text: "Creating unforgettable experiences through unique & impactful events.",
   },
   {
