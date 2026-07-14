@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Trophy } from "lucide-react";
 import { GoTrophy } from "react-icons/go";
 
 const trustedFaces = [
