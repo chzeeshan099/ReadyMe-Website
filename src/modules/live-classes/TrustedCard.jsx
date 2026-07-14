@@ -15,9 +15,9 @@ const TrustedCard = () => {
     <section className="mt-6">
       <div className="overflow-hidden rounded-[22px] border border-lightBlue bg-[radial-gradient(circle_at_0%_0%,rgba(29,78,216,0.12),transparent_34%),linear-gradient(180deg,#050b17_0%,#020611_100%)] px-5 py-4 shadow-[0_14px_34px_rgba(0,0,0,0.34),inset_0_1px_0_rgba(78,132,255,0.18)] sm:px-7 sm:py-5">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="group flex items-center gap-3 sm:gap-4">
             <div className="flex h-auto w-11 w-[52px] items-center justify-center rounded-[14px] text-border">
-              <GoTrophy className="h-10 w-10 text-blue" />
+              <GoTrophy className="h-10 w-10 text-blue custom-hover" />
             </div>
 
             <h3 className="text-[1rem] sm:text-[1.45rem] md:text-[1.9rem] font-medium leading-[1.34] tracking-[-0.04em] text-white">
@@ -30,14 +30,14 @@ const TrustedCard = () => {
               {trustedFaces.map((face, index) => (
                 <div
                   key={`${face.src}-${index}`}
-                  className={`relative h-[34px] w-[34px] sm:h-[72px] sm:w-[72px] overflow-hidden rounded-full bg-[linear-gradient(180deg,#3d2c1f_0%,#171a25_100%)] shadow-[0_10px_22px_rgba(0,0,0,0.32)]`}
+                  className={`group relative h-[34px] w-[34px] sm:h-[72px] sm:w-[72px] overflow-hidden rounded-full bg-[linear-gradient(180deg,#3d2c1f_0%,#171a25_100%)] shadow-[0_10px_22px_rgba(0,0,0,0.32)]`}
                 >
                   <Image
                     src={face.src}
                     alt={face.alt}
                     fill
                     sizes="68px"
-                    className={`object-cover ${face.className}`}
+                    className={`object-cover custom-hover ${face.className}`}
                   />
                 </div>
               ))}
