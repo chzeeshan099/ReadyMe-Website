@@ -5,7 +5,7 @@ const Hero = () => {
   return (
    <>
     <div className="flex flex-col md:flex-row items-center justify-between gap-1 mb-6">
-               <div className="w-full md:w-[50%] ">
+               <div className="w-full md:w-[55%] ">
               
                  <div className="mt-0 inline-flex rounded-full border border-blue bg-[#07101d]/80 p-2 md:p-3 text-[10px] md:text-xs lg:text-sm uppercase tracking-[0.2em] text-textWhiteLight shadow-[0_12px_32px_rgba(0,0,0,0.18)]">
                    <p>
@@ -28,9 +28,9 @@ const Hero = () => {
                
                </div>
    
-               <div className="mx-auto mt-2 md:mt-0  w-full md:w-[50%]">
+               <div className="mt-2 md:mt-0  w-full md:w-[40%]">
                  <Image
-                   src="/about.png"
+                   src="/about1.png"
                    alt="ReadyMe live-classes app preview"
                    width={1535}
                    height={1024}
