@@ -41,9 +41,9 @@ const Features = () => {
           return (
             <div
               key={card.title}
-              className="rounded-[22px] border border-lightBlue bg-[linear-gradient(180deg,#071120_0%,#040b16_100%)] px-6 py-7 shadow-[0_18px_38px_rgba(0,0,0,0.24)]"
+              className="group rounded-[22px] border border-lightBlue bg-[linear-gradient(180deg,#071120_0%,#040b16_100%)] px-6 py-7 shadow-[0_18px_38px_rgba(0,0,0,0.24)]"
             >
-              <div className={`flex justify-center ${card.accent}`}>
+              <div className={`custom-hover flex justify-center ${card.accent}`}>
                 <Icon size={48} strokeWidth={1.7} />
               </div>
               <h3 className="mt-5 text-center text-[1.2rem] font-medium leading-9 text-white sm:text-[1.35rem]">
