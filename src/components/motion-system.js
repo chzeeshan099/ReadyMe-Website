@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const pageVariants = {
   animate: {
@@ -28,22 +28,6 @@ const directionOffsets = {
   right: { x: 52, y: 0 },
   top: { x: 0, y: -34 },
 };
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 768px)");
-    const update = () => setIsMobile(media.matches);
-
-    update();
-    media.addEventListener("change", update);
-
-    return () => media.removeEventListener("change", update);
-  }, []);
-
-  return isMobile;
-}
 
 function getRevealVariants(direction, delay) {
   const offset = directionOffsets[direction] || directionOffsets.bottom;
@@ -88,6 +72,10 @@ export function PageTransition({ children }) {
   const pathname = usePathname();
   const reduceMotion = useReducedMotion();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+
   if (reduceMotion) {
     return <div key={pathname}>{children}</div>;
   }
@@ -115,24 +103,10 @@ export function Reveal({
   direction = "bottom",
 }) {
   const reduceMotion = useReducedMotion();
-  const isMobile = useIsMobile();
   const variants = getRevealVariants(direction, delay);
 
   if (reduceMotion) {
     return <div className={className}>{children}</div>;
-  }
-
-  if (isMobile) {
-    return (
-      <motion.div
-        className={className}
-        initial={false}
-        animate="visible"
-        variants={variants}
-      >
-        {children}
-      </motion.div>
-    );
   }
 
   return (
@@ -140,7 +114,7 @@ export function Reveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount, margin: "0px 0px -12% 0px" }}
+      viewport={{ once: false, amount, margin: "0px 0px -10% 0px" }}
       variants={variants}
     >
       {children}
@@ -150,7 +124,6 @@ export function Reveal({
 
 export function StaggerGroup({ children, className, delay = 0 }) {
   const reduceMotion = useReducedMotion();
-  const isMobile = useIsMobile();
 
   if (reduceMotion) {
     return <div className={className}>{children}</div>;
@@ -159,12 +132,15 @@ export function StaggerGroup({ children, className, delay = 0 }) {
   return (
     <motion.div
       className={className}
-      initial={false}
-      whileInView={isMobile ? undefined : "visible"}
-      animate={isMobile ? "visible" : undefined}
-      viewport={{ once: true, amount: 0.08 }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.08, margin: "0px 0px -8% 0px" }}
       variants={{
-        hidden: {},
+        hidden: {
+          transition: {
+            staggerChildren: 0,
+          },
+        },
         visible: {
           transition: {
             delayChildren: delay,
@@ -186,7 +162,12 @@ export function StaggerItem({ children, className, delay = 0 }) {
   }
 
   return (
-    <motion.div className={className} custom={delay} variants={itemVariants}>
+    <motion.div
+      className={className}
+      custom={delay}
+      variants={itemVariants}
+      initial="hidden"
+    >
       {children}
     </motion.div>
   );

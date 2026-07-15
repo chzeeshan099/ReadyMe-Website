@@ -7,7 +7,7 @@ import Image from "next/image";
 const steps = [
   {
     number: "1",
-    title: ["Pre-Register"],
+    title: "Pre-Register",
     description: "Enter your details to pre-register for ReadyMe.",
     image: "/mobile.png",
     accent: "text-[#1480ff]",
@@ -15,7 +15,7 @@ const steps = [
   },
   {
     number: "2",
-    title: ["Our Team Will Contact You"],
+    title: "Our Team Will Contact You",
     description: "Our team will receive your details and get in touch with you shortly.",
     image: "/mobile2.png",
     accent: "text-[#1480ff]",
@@ -23,7 +23,7 @@ const steps = [
   },
   {
     number: "3",
-    title: ["Choose Your Grade"],
+    title: "Choose Your Grade",
     description: "Select your current grade / level.",
     image: "/mobile3.png",
     accent: "text-[#1480ff]",
@@ -31,7 +31,7 @@ const steps = [
   },
   {
     number: "4",
-    title: ["Choose Your Subjects"],
+    title: "Choose Your Subjects",
     description: "Select the subjects you want to learn.",
     image: "/mobile4.png",
     accent: "text-[#1480ff]",
@@ -39,7 +39,7 @@ const steps = [
   },
   {
     number: "5",
-    title: ["Select Your Exam Dates"],
+    title: "Select Your Exam Dates",
     description: "Choose when your exams are.",
     image: "/mobile5.png",
     accent: "text-[#1480ff]",
@@ -47,7 +47,7 @@ const steps = [
   },
   {
     number: "6",
-    title: ["You're On The List!"],
+    title: "You're On The List!",
     description: "You'll be on the list. We'll notify you as soon as we launch.",
     image: "/mobile6.png",
     accent: "text-[#a44dff]",

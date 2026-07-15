@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <body suppressHydrationWarning>
         <ThemeProvider>
           <AppFrame>{children}</AppFrame>
         </ThemeProvider>
@@ -18,4 +18,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
