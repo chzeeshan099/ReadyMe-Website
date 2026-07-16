@@ -294,6 +294,26 @@ a {
   color: var(--success-text);
 }
 
+.custom-dropdown-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(126, 199, 255, 0.45) transparent;
+}
+
+.custom-dropdown-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-dropdown-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-dropdown-scroll::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(126, 199, 255, 0.65), rgba(11, 123, 255, 0.32));
+  background-clip: padding-box;
+}
+
 
 
 
