@@ -1,5 +1,4 @@
 "use client";
-
 import { useMemo, useState } from "react";
 import {
   examSessions,
@@ -13,6 +12,9 @@ import StudentInfoStep from "./StudentInfoStep";
 import SchoolInfoStep from "./SchoolInfoStep";
 import ExamInfoStep from "./ExamInfoStep";
 import { submitStudentForm } from "../utils/submitStudentForm";
+import { supabase } from "@/utils/supabase";
+
+
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -72,7 +74,7 @@ function validateExamInfo(values) {
   return errors;
 }
 
-export default function StudentFormClient() {
+export default  function StudentFormClient() {
   const currentStep = useStudentFormStore((state) => state.currentStep);
   const formData = useStudentFormStore((state) => state.formData);
   const hasHydrated = useStudentFormStore((state) => state.hasHydrated);
@@ -88,6 +90,7 @@ export default function StudentFormClient() {
   const [submitError, setSubmitError] = useState("");
   const [submitSuccess, setSubmitSuccess] = useState("");
 
+
   const levelStageOptions = useMemo(
     () => levelStages[formData.examInfo.level] || [],
     [formData.examInfo.level]
@@ -95,15 +98,15 @@ export default function StudentFormClient() {
 
   const finalPayload = useMemo(
     () => ({
-      studentName: formData.studentInfo.studentName,
+      name: formData.studentInfo.studentName,
       whatsappNumber: formData.studentInfo.whatsappNumber,
       email: formData.studentInfo.email,
-      schoolName: formData.schoolInfo.schoolName,
+      school_name: formData.schoolInfo.schoolName,
       grade: formData.schoolInfo.grade,
-      examSession: formData.examInfo.examSession,
+      exam_session: formData.examInfo.examSession,
       subjects: formData.examInfo.subjects,
       level: formData.examInfo.level,
-      levelStage: formData.examInfo.levelStage,
+      level_stage: formData.examInfo.levelStage,
     }),
     [formData]
   );
@@ -179,8 +182,12 @@ export default function StudentFormClient() {
 
     try {
       setIsSubmitting(true);
-      const response = await submitStudentForm(finalPayload);
-      setSubmitSuccess(response.message);
+      // const response = await submitStudentForm(finalPayload);
+      const {data , error}= await supabase.from('students').insert(finalPayload).select().single();
+      console.log(data , 'data_pre_registration')  
+      console.log(error , 'error_pre_registration')
+
+      setSubmitSuccess('data submit successfully');
       resetForm();
       setErrors({});
     } catch (error) {
