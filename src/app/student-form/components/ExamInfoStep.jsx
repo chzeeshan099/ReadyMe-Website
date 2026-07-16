@@ -11,7 +11,6 @@ export default function ExamInfoStep({
   onSubmit,
   isSubmitting,
   submitError,
-  submitSuccess,
   examSessions,
   levelOptions,
   levelStageOptions,
@@ -74,12 +73,6 @@ export default function ExamInfoStep({
       {submitError ? (
         <div className="mt-5 rounded-[20px] border border-[#ff6d87]/30 bg-[#ff6d87]/10 px-4 py-3 text-sm text-[#ffc1cb]">
           {submitError}
-        </div>
-      ) : null}
-
-      {submitSuccess ? (
-        <div className="theme-success mt-5 rounded-[20px] px-4 py-3 text-sm">
-          {submitSuccess}
         </div>
       ) : null}
 

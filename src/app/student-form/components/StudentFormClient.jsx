@@ -13,6 +13,7 @@ import SchoolInfoStep from "./SchoolInfoStep";
 import ExamInfoStep from "./ExamInfoStep";
 import { submitStudentForm } from "../utils/submitStudentForm";
 import { supabase } from "@/utils/supabase";
+import { toast } from "react-toastify";
 
 
 
@@ -88,7 +89,6 @@ export default  function StudentFormClient() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [submitSuccess, setSubmitSuccess] = useState("");
 
 
   const levelStageOptions = useMemo(
@@ -174,7 +174,6 @@ export default  function StudentFormClient() {
     const nextErrors = validateExamInfo(formData.examInfo);
     setErrors(nextErrors);
     setSubmitError("");
-    setSubmitSuccess("");
 
     if (Object.keys(nextErrors).length) {
       return;
@@ -187,8 +186,13 @@ export default  function StudentFormClient() {
       console.log(data , 'data_pre_registration')  
       console.log(error , 'error_pre_registration')
 
-      setSubmitSuccess('data submit successfully');
-      resetForm();
+      if(data){
+        toast.success("Student registered successfully!");
+        resetForm();
+      }
+      if(error){
+        toast.error(error)
+      }
       setErrors({});
     } catch (error) {
       setSubmitError(
@@ -254,7 +258,6 @@ export default  function StudentFormClient() {
           onSubmit={handleSubmit}
           isSubmitting={isSubmitting}
           submitError={submitError}
-          submitSuccess={submitSuccess}
           examSessions={examSessions}
           levelOptions={levels}
           levelStageOptions={levelStageOptions}
