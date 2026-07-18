@@ -226,12 +226,10 @@ export default  function StudentFormClient() {
           Student Registration
         </p>
         <h1 className="theme-text mt-4 text-4xl font-bold tracking-[-0.05em] sm:text-5xl">
-          Complete your ReadyMe student form
+          Complete your Pre Registration
         </h1>
         <p className="theme-muted mx-auto mt-4 max-w-[760px] text-base leading-8 sm:text-lg">
           Fill your student, school, and exam details in three simple steps.
-          Your progress stays saved during refresh and clears automatically once
-          the tab is closed.
         </p>
       </div>
 
