@@ -101,12 +101,12 @@ export default  function StudentFormClient() {
       name: formData.studentInfo.studentName,
       whatsappNumber: formData.studentInfo.whatsappNumber,
       email: formData.studentInfo.email,
-      school_name: formData.schoolInfo.schoolName,
+      schoolName: formData.schoolInfo.schoolName,
       grade: formData.schoolInfo.grade,
-      exam_session: formData.examInfo.examSession,
+      examSession: formData.examInfo.examSession,
       subjects: formData.examInfo.subjects,
       level: formData.examInfo.level,
-      level_stage: formData.examInfo.levelStage,
+      levelStage: formData.examInfo.levelStage,
     }),
     [formData]
   );
