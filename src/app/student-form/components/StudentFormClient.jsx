@@ -14,6 +14,7 @@ import ExamInfoStep from "./ExamInfoStep";
 import { submitStudentForm } from "../utils/submitStudentForm";
 import { toast } from "react-toastify";
 import { createPreRegisterUserApi } from "@/apis/pre-register-user";
+import Swal from "sweetalert2";
 
 
 
@@ -186,7 +187,15 @@ export default  function StudentFormClient() {
       console.log(error , 'error_pre_registration')
 
       if(data){
-        toast.success("Student registered successfully!");
+        // toast.success("Student registered successfully!");
+        await Swal.fire({
+        title: "Registration Successful!",
+        text: "You have successfully pre-registered for ReadyMe. When the app goes live, you will receive a 50% discount.",
+        icon: "success",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#2563eb",
+        allowOutsideClick: false,
+      });
         resetForm();
       }
       if(error){
