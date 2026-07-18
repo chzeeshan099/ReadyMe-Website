@@ -12,8 +12,8 @@ import StudentInfoStep from "./StudentInfoStep";
 import SchoolInfoStep from "./SchoolInfoStep";
 import ExamInfoStep from "./ExamInfoStep";
 import { submitStudentForm } from "../utils/submitStudentForm";
-import { supabase } from "@/utils/supabase";
 import { toast } from "react-toastify";
+import { createPreRegisterUserApi } from "@/apis/pre-register-user";
 
 
 
@@ -181,8 +181,7 @@ export default  function StudentFormClient() {
 
     try {
       setIsSubmitting(true);
-      // const response = await submitStudentForm(finalPayload);
-      const {data , error}= await supabase.from('students').insert(finalPayload).select().single();
+      const {data , error} = await createPreRegisterUserApi(finalPayload);
       console.log(data , 'data_pre_registration')  
       console.log(error , 'error_pre_registration')
 
